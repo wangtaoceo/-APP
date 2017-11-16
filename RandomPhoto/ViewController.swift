@@ -14,12 +14,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    @IBOutlet weak var ImageView: UIImageView!
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func buttonPressed(_ sender: Any) {
+        ImageView.image = UIImage(named: "image\(arc4random_uniform(6) + 1).jpg")
 
+    }
+    
 }
 
